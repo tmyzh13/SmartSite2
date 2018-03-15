@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/lab_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="32dp"
+        android:text="2017-10-02"
+        android:textColor="@color/hit_text_color"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lab_time"
+        android:layout_marginLeft="4dp"
+        android:orientation="vertical">
+
+        <com.isoftstone.smartsite.model.system.ui.CircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/lab_creator_name"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="张"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/des_text_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/pending" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lab_time"
+        android:layout_toLeftOf="@id/linear_head"
+        android:background="@drawable/dialogright"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="23dp"
+        android:id="@+id/linear_grid_view"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/lab_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="与事实不符，请知悉"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp" />
+
+        <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+            android:id="@+id/grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/img_edit_report"
+            android:layout_marginTop="16dp"
+            android:columnWidth="64dp"
+            android:listSelector="@android:color/transparent"
+            ></com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+
+    </LinearLayout>
+
+</RelativeLayout>

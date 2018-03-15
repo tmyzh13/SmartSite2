@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".model.dirtcar.activity.SelectImageActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        style="@style/toolbar_style"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:onClick="onBackBtnClick"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/bigarrow" />
+
+            <TextView
+                android:id="@+id/lab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="选择图片"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:gravity="center"
+                android:onClick="onClick_submit"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="提交"
+                android:textColor="@color/title_save"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:numColumns="3"
+        android:layout_height="match_parent"></GridView>
+</LinearLayout>

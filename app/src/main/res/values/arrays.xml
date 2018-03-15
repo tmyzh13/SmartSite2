@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tab_title">
+        <item>首页</item>
+        <item>地图</item>
+        <item>消息</item>
+        <item>系统</item>
+    </array>
+    <!-- main   start -->
+
+    <!-- main   end -->
+    <!-- map   start -->
+
+    <!-- map   end -->
+
+    <!--msg   start -->
+    <array name="spinner_temp">
+        <item>下拉选择1</item>
+        <item>下拉选择2</item>
+        <item>下拉选择3</item>
+        <item>下拉选择4</item>
+    </array>
+
+    <array name="status_array">
+        <item>待补充</item>
+        <item>待处理</item>
+        <item>待回访</item>
+        <item>已退回</item>
+        <item>已验收</item>
+    </array>
+    <!--msg   end -->
+    <!--system   start -->
+
+    <!--system   end -->
+
+    <array name="weeks">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+
+</resources>

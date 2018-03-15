@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3464dd</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#406ee1</color>
+    <color name="windowBackground">#f5f5f5</color>
+
+    <color name="mainColor">#3464dd</color>
+    <color name="secondColor">#ffa9b8</color>
+    <color name="thirdColor">#81d9c9</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <!-- app的背景颜色-->
+    <color name="app_background">#f5f5f5</color>
+    <color name="tab_text_normal">#212121</color>
+    <color name="gray">#BBBBBB</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#3464DD</color>
+    <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color>
+    <!-- 主要显示字体的颜色，几乎是纯黑-->
+    <color name = "main_text_color">#222222</color>
+    <!-- 次要字体（描述性字体的颜色）-->
+    <color name = "des_text_color">#999999</color>
+    <color name ="hit_text_color">#cccccc</color>
+
+    <!-- main   start -->
+    <color name = "single_text_color">#666666</color>
+    <color name="transparent">#7f000000</color>
+    <color name="gray_f2f2">#f2f2f2</color>
+    <color name="gray_9999">#9999</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#ff3b30</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--actionsheet模式的取消按钮背景颜色-->
+    <color name="bgColor_actionsheet_cancel_nor">#ffffff</color>
+
+    <!--环境监控  优-->
+    <color name="huanjin_you">#01b663</color>
+    <!--环境监控  良-->
+    <color name="huanjin_liang">#ffd801</color>
+    <!--环境监控  轻度-->
+    <color name="huanjin_qingdu">#fd8200</color>
+    <!--环境监控  中度-->
+    <color name="huanjin_zhong1du">#fd0001</color>
+    <!--环境监控  重度-->
+    <color name="huanjin_zhongdu">#95014b</color>
+    <!--环境监控  严重污染-->
+    <color name="huanjin_yanzhong">#5c011b</color>
+    <!-- main   end -->
+    <!-- map   start -->
+    <color name="devices_press">#88ffffff</color>
+    <color name="report_item_title_bg">#fbfbfb</color>
+    <color name="back_pressed">#eeeeeeee</color>
+    <color name="map_banner_text_color">#424242</color>
+    <color name="map_item_normal">#feffff</color>
+    <color name="map_item_press">#dddee0</color>
+    <color name="common_press">#22000000</color>
+    <!-- map   end -->
+
+    <!--msg   start -->
+    <color name="back_btn_press_bg">#4d7ef9</color>
+    <color name="msg_item_press_bg">#eeeeee</color>
+    <color name="trans">#00000000</color>
+    <color name="dividing_line">#eeeeee</color>
+    <color name="lab_add_item">#666666</color>
+    <!--msg   end -->
+    <!-- three party begin-->
+    <color name="title_save">#FEFEFE</color>
+    <!-- three party end -->
+    <!--system   start -->
+
+    <!--system   end -->
+
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+
+    <color name="color1">#F0F0F0</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="color3">#B0B0B0</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#57C5E8</color>
+    <!-- select inspectors begin-->
+    <color name="colorSort">#666666</color>
+    <color name="colorContact">#333333</color>
+    <color name="colorSortBackground">#D3D3D3</color>
+    <!-- select inspectors begin-->
+</resources>

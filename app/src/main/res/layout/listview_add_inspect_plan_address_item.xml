@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/lab_address"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_rectangle_hubian"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="光谷中心城光谷三路"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+        <ImageButton
+            android:id="@+id/img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:paddingBottom="4dp"
+            android:layout_gravity="top|right"
+            android:src="@drawable/delete"/>
+    </FrameLayout>
+    <!--android:background="@drawable/shape_rectangle_hubian"-->
+
+</LinearLayout>

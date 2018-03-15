@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.isoftstone.smartsite.model.system.ui.CircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lab_report_people_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三峰"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/inspect_report_report_people"
+                android:textColor="@color/hit_text_color"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/lab_name"
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_check_people" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            style="@style/add_report_edittext" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingLeft="16dp"
+        android:background="@color/white"
+        android:src="@color/app_background" />
+    <!--巡查时间-->
+    <include layout="@layout/view_input_inspect_time"></include>
+
+    <!--报告名称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/lab_report_name"
+            style="@style/add_report_lab"
+            android:text="@string/inpsect_report_name" />
+
+        <EditText
+            android:id="@+id/edit_report_name"
+            style="@style/add_report_edittext" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingLeft="16dp"
+        android:background="@color/white"
+        android:src="@color/app_background" />
+
+    <include layout="@layout/view_input_report_msg"></include>
+    <!--是否回访-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:drawableLeft="@drawable/editcolumn"
+            android:text="@string/inspect_report_is_need_recheck" />>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/selector_radio"
+                android:drawablePadding="2dp"
+                android:paddingLeft="10dp"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/radio_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_radio"
+                android:drawablePadding="2dp"
+                android:paddingLeft="10dp"
+                android:text="@string/no" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_revisit_time"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="16dp"
+            android:background="@color/white"
+            android:src="@color/app_background" />
+
+        <TextView
+            android:id="@+id/lab_revisit_time"
+            style="@style/add_report_lab"
+            android:paddingRight="16dp"
+            android:text="@string/report_revisit_time" />
+
+        <TextView
+            android:id="@+id/lab_edit_revisit_time"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/data"
+            android:gravity="right|center_vertical"
+            android:paddingRight="16dp"
+            android:text="@string/enter_time"
+            android:textColor="@color/des_text_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_add_report_submit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_submit_bg"
+        android:elevation="0dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="16sp"></Button>
+
+</LinearLayout>

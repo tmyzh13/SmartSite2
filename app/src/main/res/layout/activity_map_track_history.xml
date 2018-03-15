@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_no_icon"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/dividing_line">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:text="2017-11-19"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:id="@+id/truck_back"
+            android:background="@drawable/selector_common_press">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/truck_back"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:id="@+id/truck_next"
+            android:background="@drawable/selector_common_press"
+            android:layout_alignParentRight="true">
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/truck_next"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="16dp"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_view"></com.amap.api.maps.MapView>
+
+</LinearLayout>

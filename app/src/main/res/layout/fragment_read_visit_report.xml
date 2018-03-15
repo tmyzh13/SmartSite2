@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/lab_sub_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="2017-09-29"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/hit_text_color"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <com.isoftstone.smartsite.model.system.ui.CircleImageView
+                android:id="@+id/img_head_send_report"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/lab_creator_name"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="张三丰"
+                android:gravity="center"
+                android:textColor="@color/des_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialogleft"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspect_report_check_people_read"
+                    android:textColor="@color/lab_add_item"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/inspect_report_check_people_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="张三、李四、王五"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspect_report_time_read"
+                    android:textColor="@color/lab_add_item"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lab_begin_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="2017-09-24 10:30"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/lab_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:text="2017-09-24 18:00"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/shape_listview_year_bg" />
+
+            <TextView
+                android:id="@+id/lab_report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="光谷中心城违章报告"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lab_report_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="在光谷中心城1号工地发现违章行为，请尽快查清"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+                android:id="@+id/grid_view_source_report_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="16dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"></com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background">
+
+    <include layout="@layout/layout_toolbar_calendar" />
+
+    <LinearLayout
+        android:id="@+id/weeks"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/days"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/day_0"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_1"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_3"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_3"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_4"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_4"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_5"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/daymargin_5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/day_6"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="1"
+            android:textAllCaps="true"
+            android:textColor="@color/single_text_color"
+            android:textSize="@dimen/textSize_actionsheet_title" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:dividerHeight="0dp"
+            android:divider="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/tuihuitonguo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageview_tuihui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tuihui" />
+
+            <ImageView
+                android:id="@+id/imageview_tongguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/shenpitongguo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tijiaoshenpi_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageview_tijiaoshenpi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/tijiaoshenpi" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

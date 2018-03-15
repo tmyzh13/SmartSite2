@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><!--显示回复巡查报告的Fragment页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="@string/inspect_report_reply"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_reply_people" />
+
+        <TextView
+            android:id="@+id/inspect_report_reply_people"
+            style="@style/add_report_lab"
+            android:text="李四" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_recheck_report_people" />
+
+        <TextView
+            android:id="@+id/inspect_report_name"
+            style="@style/add_report_lab"
+            android:text="张三" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/check_report_report_report_time" />
+
+        <TextView
+            android:id="@+id/inspect_report_revisit_time"
+            style="@style/add_report_lab"
+            android:text="2017-10-18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_recheck_msg" />
+
+        <TextView
+            android:id="@+id/inspect_report_revisit_msg"
+            style="@style/add_report_lab"
+            android:text="违章查询" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/des_visit_problem" />
+
+        <TextView
+            android:id="@+id/inspect_report_revisit_des"
+            style="@style/add_report_lab"
+            android:text="在光谷中心城一号工地发现违章行为" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_recheck_is_need_recheck" />
+
+        <TextView
+            android:id="@+id/inspect_report_is_need_revisit"
+            style="@style/add_report_lab"
+            android:text="是" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_recheck_next_recheck_time" />
+
+        <TextView
+            android:id="@+id/inspect_report_next_revisit_time"
+            style="@style/add_report_lab"
+            android:text="2018-01-20" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/add_report_lab"
+        android:text="@string/check_report_recheck_time" />
+
+    <GridView
+        android:id="@+id/gridview_revisit_sub_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></GridView>
+</LinearLayout>
+

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_address" />
+
+                <TextView
+                    android:id="@+id/check_report_address"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_time" />
+
+                <TextView
+                    android:id="@+id/check_report_time"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_report_name" />
+
+                <TextView
+                    android:id="@+id/check_report_report_name"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_report_company" />
+
+                <TextView
+                    android:id="@+id/check_report_report_company"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_build_company" />
+
+                <TextView
+                    android:id="@+id/check_report_build_company"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_construction_company" />
+
+                <TextView
+                    android:id="@+id/check_report_construction_company"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_supervision_company" />
+
+                <TextView
+                    android:id="@+id/check_report_supervision_company"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_report_report_time" />
+
+                <TextView
+                    android:id="@+id/check_report_report_report_time"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_des" />
+
+                <TextView
+                    android:id="@+id/check_report_des"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_is_need_recheck" />
+
+                <TextView
+                    android:id="@+id/check_report_is_need_recheck"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_report_lab"
+                    android:text="@string/check_report_recheck_time" />
+
+                <TextView
+                    android:id="@+id/check_report_recheck_time"
+                    style="@style/add_report_edittext" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

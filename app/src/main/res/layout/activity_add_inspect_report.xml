@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.isoftstone.smartsite.model.tripartite.activity.AddReportActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        style="@style/toolbar_style"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:onClick="onBackBtnClick"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/bigarrow" />
+
+            <TextView
+                android:id="@+id/lab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/add_report"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:gravity="center"
+                android:onClick="onBtnSaveClick"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/save"
+                android:textColor="@color/title_save"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/lab_address"
+                    style="@style/add_report_lab"
+                    android:text="@string/inspect_report_address" />
+
+                <ImageView
+                    android:id="@+id/img_address_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/droparrow"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edit_address"
+                    style="@style/add_report_spinner"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/img_address_down"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/des_text_color"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/address_edittext"
+                    style="@style/add_report_edittext" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/shape_listview_year_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/lab_company"
+                    style="@style/add_report_lab"
+                    android:text="@string/inspect_report_company" />
+
+                <EditText
+                    android:id="@+id/edit_company"
+                    style="@style/add_report_edittext"
+                    android:focusable="false" />
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="54dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingRight="16dp">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lab_status"-->
+            <!--style="@style/add_report_lab"-->
+            <!--android:text="@string/inspect_report_status" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_status_down"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:src="@drawable/droparrow" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/spinner_report_status"-->
+            <!--style="@style/add_report_spinner"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_toLeftOf="@id/img_status_down"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:onClick="onSpinnerReportAddressClicked"-->
+            <!--android:text="请选择"-->
+            <!--android:textColor="@color/des_text_color" />-->
+
+            <!--</RelativeLayout>-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/shape_listview_year_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/lab_types"
+                    style="@style/add_report_lab"
+                    android:text="@string/inspect_report_types" />
+
+                <ImageView
+                    android:id="@+id/img_types_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/droparrow" />
+
+                <TextView
+                    android:id="@+id/lab_report_types"
+                    style="@style/add_report_spinner"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/img_types_down"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:text="请选择"
+                    android:textColor="@color/des_text_color" />
+
+            </RelativeLayout>
+
+            <!-- 建设单位 默认不显示-->
+            <LinearLayout
+                android:id="@+id/linear_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_build_company"
+                        style="@style/add_report_lab"
+                        android:text="@string/inspect_report_build_company" />
+
+                    <EditText
+                        android:id="@+id/edit_build_company"
+                        style="@style/add_report_edittext" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/shape_listview_year_bg" />
+
+                <!-- 施工单位，默认不显示-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_cons_company"
+                        style="@style/add_report_lab"
+                        android:text="@string/inspect_report_construction_company" />
+
+                    <EditText
+                        android:id="@+id/edit_cons_company"
+                        style="@style/add_report_edittext" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/shape_listview_year_bg" />
+
+                <!-- 监理单位，默认不显示-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_super_company"
+                        style="@style/add_report_lab"
+                        android:text="@string/inspect_report_supervision_company" />
+
+                    <EditText
+                        android:id="@+id/edit_super_company"
+                        style="@style/add_report_edittext" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/frag_reply_inspect_report"
+                android:name="com.isoftstone.smartsite.model.tripartite.fragment.RevisitFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></fragment>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

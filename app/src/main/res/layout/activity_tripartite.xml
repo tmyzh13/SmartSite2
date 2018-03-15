@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.isoftstone.smartsite.model.tripartite.activity.TripartiteActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_default"
+            style="@style/toolbar_style"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_back_press_bg"
+                    android:onClick="onBackBtnClick"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:src="@drawable/bigarrow" />
+
+                <TextView
+                    android:id="@+id/lab_title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/frag_msg_synergy"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_back_press_bg"
+                    android:onClick="onSearchBtnClick"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="12dp"
+                    android:src="@drawable/search" />
+
+                <ImageButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/btn_search"
+                    android:background="@drawable/btn_back_press_bg"
+                    android:onClick="onAddReportBtnClick"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:src="@drawable/addreport" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/layout_toolbar_search"></include>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:id="@+id/linear_switch"
+        android:gravity="center_vertical">
+        <!-- 巡查 -->
+        <TextView
+            android:id="@+id/lab_inspect"
+            style="@style/frag_msg_swtich_title"
+            android:text="@string/inspect_report_title" />
+        <!-- 验收-->
+        <TextView
+            android:id="@+id/lab_check"
+            style="@style/frag_msg_swtich_title"
+            android:text="@string/check_report_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:id="@+id/linear_switch_img"
+        android:gravity="center_vertical">
+        <!-- 巡查 -->
+        <ImageView
+            android:id="@+id/img_inspect"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@color/mainColor" />
+        <!-- 验收-->
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@color/mainColor"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/report_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="360"></android.support.v4.view.ViewPager>
+</LinearLayout>

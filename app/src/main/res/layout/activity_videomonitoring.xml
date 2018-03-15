@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_one_icon"
+        android:id="@+id/one_icon"/>
+    <include layout="@layout/layout_toolbar_search"
+        android:visibility="gone"
+        android:id="@+id/serch"/>
+
+    <com.isoftstone.smartsite.common.widget.PullToRefreshListView
+        android:id="@+id/list"
+        android:divider="@color/trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"/>
+
+</LinearLayout>

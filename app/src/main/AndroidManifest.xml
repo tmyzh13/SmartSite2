@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.isoftstone.smartsite">
+
+
+    <!-- Required -->
+    <permission
+        android:name="com.isoftstone.smartsite.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.isoftstone.smartsite.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <!--tools:replace="android:icon, android:label, android:theme"-->
+    <application
+        android:name=".common.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2bbb674749feb50c096e27343e2d37a4"></meta-data>
+
+        <!-- For test only 测试的主程序-->
+        <activity
+            android:name="com.isoftstone.smartsite.jpush.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- For test only 测试高级功能 -->
+        <activity android:name="com.isoftstone.smartsite.jpush.PushSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <!-- For test only 测试设置 -->
+        <activity android:name="com.isoftstone.smartsite.jpush.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity android:name="com.isoftstone.smartsite.jpush.TestActivity" android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.isoftstone.smartsite" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":mult"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.isoftstone.smartsite.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:exported="true"
+            />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.isoftstone.smartsite" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.isoftstone.smartsite" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.isoftstone.smartsite.jpush.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.isoftstone.smartsite" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name="com.isoftstone.smartsite.jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.isoftstone.smartsite"></category>
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="92e21b16f653d5438982cd02" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+
+        <!--  guowei -->
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".model.main.ui.AirMonitoringActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".model.main.ui.PMDevicesListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".model.main.ui.PMDataInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".model.main.ui.PMHistoryInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity2"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".model.main.ui.VideoMonitoringActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!--  guowei -->
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 巡查计划审批  -->
+        <activity
+            android:name=".model.inspectplan.activity.PatrolPlanActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--yanyongjun begin-->
+        <!--
+        <activity
+            android:name=".model.message.ui.DetailsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        -->
+        <activity
+            android:name=".model.tripartite.activity.TripartiteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity android:name=".model.tripartite.activity.CheckReportActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".model.message.ui.MessageListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <!--
+        <activity android:name=".model.message.ui.EnvironActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        -->
+
+        <activity android:name=".model.tripartite.activity.AddReportActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".model.tripartite.activity.ReadReportActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".model.tripartite.activity.ReplyReportActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".model.tripartite.activity.RevistReportActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <!--yanyongjun end-->
+
+        <!--zhangyinfu begin-->
+        <activity android:name=".model.system.ui.PermissionsActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name="com.uniview.airimos.service.KeepaliveService"/>
+
+        <service android:name=".common.NewKeepAliveService"/>
+
+        <service android:name=".common.NetworkStateService"/>
+
+        <activity android:name=".model.system.ui.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+
+        <activity android:name=".model.system.ui.OpinionFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+	    
+        <activity android:name=".model.system.ui.SettingsActivity"
+            android:launchMode="singleTask"></activity>
+
+        <!--  人工拍照界面 -->
+        <activity android:name=".model.dirtcar.activity.ManualPhotographyActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <!--  人工拍照图片显示界面 -->
+        <activity android:name=".model.dirtcar.activity.DisplayPhotoActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <!--  待审批巡查计划列表 -->
+        <activity android:name=".model.inspectplan.activity.ApprovalPendingInspectPlansActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <!--  摄像头详情 -->
+        <activity android:name=".model.dirtcar.activity.CameraDetailsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+        <activity android:name=".model.video.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity android:name=".model.video.VideoRePlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".model.video.VideoRePlayListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"/>
+
+
+        <activity android:name=".model.video.SnapPicturesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".model.tripartite.activity.ReadImgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".model.tripartite.activity.ReadImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.isoftstone.smartsite.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--zhangyinfu end-->
+
+        <!--zhangwei begin-->
+        <activity android:name=".model.map.ui.VideoMonitorMapActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".model.map.ui.MapSearchActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".model.index.ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".model.inspectplan.activity.AddInspectPlan"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".model.dirtcar.activity.UpdatePhotoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".model.dirtcar.activity.DirtCarListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".model.dirtcar.activity.SelectImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".model.dirtcar.activity.RecognizeDirtCarActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/recognize_dirtcar"
+            android:label=""
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".model.map.ui.ConstructionMonitorMapActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".model.map.ui.MapTaskDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.ConstructionMonitorListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.ConstructionMontitoringMapActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.MapTrackHistoryActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.MapSearchTaskPositionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            ></activity>
+        <activity android:name=".model.map.ui.MapPOIActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.MapTestActivity"></activity>
+        <activity
+            android:name="com.isoftstone.smartsite.model.inspectplan.activity.SelectInspectorsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".model.map.ui.ConstructionSummaryActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.isoftstone.smartsite.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <!--元数据-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <service android:name=".model.map.service.DownloadAPKService"></service>
+        <service android:name=".model.dirtcar.Service.RecognizeDirtCarService"></service>
+        <!--zhangwei end-->
+
+        <activity android:name=".model.patroltask.ui.PatroPlanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+
+       <activity android:name=".model.muckcar.ui.SlagcarInfoActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+    </application>
+
+</manifest>

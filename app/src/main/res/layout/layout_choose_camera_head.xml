@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom|center"
+        android:text="操作"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+    <TextView
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="top|center"
+        android:text="请选择操作"
+        android:textColor="#000000"
+        android:textSize="14sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000"
+        ></View>
+
+</LinearLayout>

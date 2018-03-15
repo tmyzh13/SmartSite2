@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="54dp">
+
+        <com.isoftstone.smartsite.model.system.ui.CircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/default_head" />
+        <ImageButton
+            android:id="@+id/img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:paddingBottom="4dp"
+            android:layout_gravity="top|right"
+            android:src="@drawable/delete"/>
+    </FrameLayout>
+
+</LinearLayout>

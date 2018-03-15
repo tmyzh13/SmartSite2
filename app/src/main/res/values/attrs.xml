@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    <!-- main   start -->
+    <!--progress -->
+    <declare-styleable name="CircularProgress">
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+    <!-- main   end -->
+    <!-- map   start -->
+
+    <!-- map   end -->
+
+    <!--msg   start -->
+
+    <!--msg   end -->
+    <!--system   start -->
+
+    <!--system   end -->
+</resources>

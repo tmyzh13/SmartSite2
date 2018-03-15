@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar_one_icon"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingLeft="11dp"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="60dp"></android.support.v7.widget.RecyclerView>
+
+    <com.amap.api.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_view"></com.amap.api.maps.MapView>
+</LinearLayout>

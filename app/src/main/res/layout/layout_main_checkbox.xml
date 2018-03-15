@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:paddingLeft="20dp"
+    android:layout_marginLeft="100dp"
+    android:layout_marginRight="100dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="请选两个区域"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/lv"
+        android:scrollbars="none"
+        android:divider="@null"
+        ></ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="确定"
+        android:id="@+id/sure"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>

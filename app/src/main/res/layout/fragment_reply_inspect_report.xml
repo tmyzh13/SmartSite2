@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--显示回复巡查报告的Fragment页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="@string/inspect_report_reply"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_reply_people" />
+
+        <TextView
+            android:id="@+id/inspect_report_reply_people"
+            style="@style/add_report_lab" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_reply_time" />
+
+        <TextView
+            android:id="@+id/inspect_report_reply_time"
+            style="@style/add_report_lab" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_report_lab"
+            android:text="@string/inspect_report_reply_msg" />
+
+        <EditText
+            android:id="@+id/inspect_report_reply_msg"
+            style="@style/add_report_edittext" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_report_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit"
+            android:textColor="@color/tab_text_normal" />
+
+        <Button
+            android:id="@+id/btn_add_report_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="@color/tab_text_normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

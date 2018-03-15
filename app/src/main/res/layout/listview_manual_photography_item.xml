@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/msg_item_press_bg">
+
+        <RelativeLayout
+            android:id="@+id/head_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <com.isoftstone.smartsite.model.system.ui.CircleImageView
+                android:id="@+id/user_head_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:id="@+id/lab_task_info_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/user_head_img"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lab_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name"
+                    android:layout_gravity="left"
+                    android:textColor="@color/main_text_color"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/lab_task_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/main_text_color"
+                    android:text="2017-11-18"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/company"
+                android:drawablePadding="6dp"
+                android:singleLine="true"
+                android:text="湖北怡瑞有限公司"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+            android:id="@+id/middle_gridview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:horizontalSpacing="10dp"
+            android:listSelector="#00ffffff"
+            android:numColumns="3"
+            android:verticalSpacing="10dp"
+            android:layout_below="@id/head_relative_layout">
+
+        </com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+
+        <TextView
+            android:id="@+id/lab_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:drawableLeft="@drawable/dircatlist_address"
+            android:drawablePadding="5dp"
+            android:singleLine="true"
+            android:text="湖北怡瑞有限公司"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

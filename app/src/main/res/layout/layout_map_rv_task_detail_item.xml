@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="42dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="60dp"
+    android:background="@drawable/selector_pressed">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="32dp"
+        android:src="@drawable/default_head"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#4f6de6"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="李向双"
+        android:singleLine="true"
+        android:textColor="@color/map_banner_text_color"
+        android:textSize="8sp"
+        android:gravity="center"/>
+</LinearLayout>

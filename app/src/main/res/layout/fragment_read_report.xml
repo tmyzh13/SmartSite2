@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_address_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_address"
+            style="@style/read_report_msg_lab"
+            android:text="光谷大道金融港" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_company_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_company"
+            style="@style/read_report_msg_lab"
+            android:text="武汉巡查有限公司" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_status_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_status"
+            style="@style/read_report_msg_lab"
+            android:text="报告中" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_types_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_types"
+            style="@style/read_report_msg_lab"
+            android:text="工地巡查报告" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_build_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_build_company_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_build_company_read"
+            style="@style/read_report_msg_lab"
+            android:text="武汉建设有限公司" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_cos_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_construction_company_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_construction_company"
+            style="@style/read_report_msg_lab"
+            android:text="武汉施工有限公司" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_super_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/inspect_report_supervision_company_read" />
+
+        <TextView
+            android:id="@+id/inspect_report_supervision_company"
+            style="@style/read_report_msg_lab"
+            android:text="武汉监理有限公司" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/read_report_lab"
+            android:text="@string/report_revisit_time_temp" />
+
+        <TextView
+            android:id="@+id/lab_inspect_report_revisit_time"
+            style="@style/read_report_msg_lab"
+            android:text="无" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.isoftstone.smartsite.model.system.ui.CircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lab_report_people_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三峰"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/inspect_report_reply_people"
+                android:textColor="@color/hit_text_color"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9f9f9"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/edit_report_msg"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="@string/pls_enter_msg"
+                android:inputType="textMultiLine"
+                android:paddingTop="16dp"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_edit_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_report_msg"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/shape_listview_year_bg" />
+
+            <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+                android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/img_edit_report"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4">
+
+            </com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_report_submit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_submit_bg"
+        android:elevation="0dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="16sp"></Button>
+</LinearLayout>

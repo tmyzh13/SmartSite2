@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:background="@color/app_background"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relative_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/lab_time"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="09:41"
+            android:textColor="@color/hit_text_color"
+            android:textSize="12sp"></TextView>
+
+        <TextView
+            android:id="@+id/lab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/lab_time"
+            android:text="NCX-12检测到PM超标"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lab_title"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/lab_title"
+            android:src="@drawable/red_oval" />
+
+        <TextView
+            android:id="@+id/lab_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lab_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/lab_time"
+            android:text="环境检测设备发送一条警告消息，PM2.5及二氧化硫超标，请及时处理"
+            android:textColor="@color/des_text_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/lab_year"
+            android:layout_width="72dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_listview_year_bg"
+            android:gravity="center"
+            android:text="2016年"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</FrameLayout>

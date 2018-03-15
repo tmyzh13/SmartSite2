@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#99CCCC"
+    android:orientation="vertical">
+
+    <com.isoftstone.smartsite.common.CircularProgress
+        android:id="@+id/login_progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:border_width="4dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#F1F2F3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F1F2F3"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="服务器"
+                android:textColor="#797979"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edittext_server"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:text="111.47.21.51"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#F1F2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F1F2F3"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="端&#160;&#160;&#160;&#160;口"
+                android:textColor="#797979"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edittext_port"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="52060" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#F1F2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F1F2F3"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="用户名"
+                android:textColor="#797979"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edittext_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="loadmin"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#F1F2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F1F2F3"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="密&#160;&#160;&#160;&#160;码"
+                android:textColor="#797979"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edittext_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:password="true"
+                android:text="loadmin"/>
+        </TableRow>
+
+
+    </TableLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="登  录"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_login_pass"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="跳 过"
+        android:textSize="16sp"/>
+
+</LinearLayout>

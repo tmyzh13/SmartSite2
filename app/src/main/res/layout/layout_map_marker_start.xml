@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:elevation="2dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/shape_map_marker_start"
+        >
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_map_video_monitor_center_inner"
+            ></View>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

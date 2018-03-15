@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="44dp">
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="光谷一路"
+            android:id="@+id/tv_address"
+            android:textColor="@color/actionsheet_gray"/>
+        <TextView
+            android:id="@+id/tv_aqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="57"
+            android:textColor="@color/actionsheet_gray"
+            android:layout_alignParentRight="true"
+            />
+        
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:backgroundTint="#eeeeed"
+            android:progressTint="#4575ee"
+            android:progress="1"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/tv_address"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            />
+
+    </RelativeLayout>
+
+    <!--<LinearLayout
+                android:id="@+id/content_paiming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="2017年10月"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/date"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/droparrow"
+                        android:layout_toRightOf="@id/date"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/droparrow"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/rank"
+                        android:paddingRight="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="AQI"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toLeftOf="@id/rank"
+                        android:textColor="@mipmap/video_black"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/gray_9999"></View>
+
+
+            </LinearLayout>-->
+
+</LinearLayout>

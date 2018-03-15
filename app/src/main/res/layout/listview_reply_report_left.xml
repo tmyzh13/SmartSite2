@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lab_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="32dp"
+        android:text="2017-10-02"
+        android:textColor="@color/hit_text_color"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <com.isoftstone.smartsite.model.system.ui.CircleImageView
+                android:id="@+id/img_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/lab_creator_name"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="张三丰"
+                android:textColor="@color/des_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialogleft"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/lab_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是符合的，请大人明察"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+                    android:id="@+id/grid_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/img_edit_report"
+                    android:layout_marginTop="16dp"
+                    android:columnWidth="54dp"
+                    android:listSelector="@android:color/transparent"></com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+            </LinearLayout>
+            <!--android:columnWidth="64dp"-->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

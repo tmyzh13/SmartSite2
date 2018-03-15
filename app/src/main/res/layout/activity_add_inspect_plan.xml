@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.isoftstone.smartsite.model.tripartite.activity.AddReportActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        style="@style/toolbar_style"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:onClick="onBackBtnClick"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/bigarrow" />
+
+            <TextView
+                android:id="@+id/lab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="新增巡查任务"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:gravity="center"
+                android:onClick="onClick_submit"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="提交"
+                android:textColor="@color/title_save"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_name"
+                        style="@style/add_report_lab"
+                        android:text="任务名称" />
+
+                    <EditText
+                        android:id="@+id/edit_name"
+                        style="@style/add_report_edittext"
+                        android:hint="请输入任务名称" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@color/dividing_line" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:src="@drawable/shape_listview_year_bg" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_address_choose_left"
+                        style="@style/add_report_lab"
+                        android:text="任务地点" />
+
+                    <TextView
+                        android:id="@+id/lab_address_choose_right"
+                        style="@style/add_report_spinner"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:drawableEnd="@drawable/jiahao"
+                        android:drawablePadding="11dp"
+                        android:gravity="right|center_vertical"
+                        android:text="请选择地点"
+                        android:textColor="@color/des_text_color" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@color/dividing_line" />
+
+                <!--<com.isoftstone.smartsite.model.tripartite.view.MyGridView-->
+                <!--android:id="@+id/grid_view_address"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="38dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:numColumns="auto_fit"></com.isoftstone.smartsite.model.tripartite.view.MyGridView>-->
+                <!--<GridLayout-->
+                    <!--android:id="@+id/grid_layout_address"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="38dp"-->
+                    <!--android:layout_marginRight="16dp"></GridLayout>-->
+                <com.isoftstone.smartsite.model.dirtcar.View.MyFlowLayout
+                    android:id="@+id/flow_layout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="38dp"></com.isoftstone.smartsite.model.dirtcar.View.MyFlowLayout>
+            </LinearLayout>
+
+            <!-- 任务执行人员-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/lab_people_left"
+                        style="@style/add_report_lab"
+                        android:text="任务执行人员" />
+
+                    <TextView
+                        android:id="@+id/lab_people_right"
+                        style="@style/add_report_spinner"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:drawablePadding="11dp"
+                        android:drawableRight="@drawable/jiahao"
+                        android:gravity="right|center_vertical"
+                        android:text="请选择"
+                        android:textColor="@color/des_text_color" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@color/dividing_line" />
+
+                <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+                    android:id="@+id/grid_view_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:numColumns="8"></com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_input_inspect_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"></include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/lab_report_msg"
+                    style="@style/add_report_lab"
+                    android:text="任务内容" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f9f9f9"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp">
+
+                    <EditText
+                        android:id="@+id/edit_report_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="116dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:hint="@string/pls_enter_msg"
+                        android:inputType="textMultiLine"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

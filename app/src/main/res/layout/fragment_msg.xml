@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar_style"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lab_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/msg"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_background"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/conlayout_vcr"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_vcr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/video_button" />
+
+                <TextView
+                    android:id="@+id/lab_vcr_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_vcr"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_vcr"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_vcr">
+
+                    <TextView
+                        android:id="@+id/lab_vcr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/frag_msg_vcr"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_vcr_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_vcr"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_vcr_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_vcr_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/conlayout_environ"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_environ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/air_button" />
+
+                <TextView
+                    android:id="@+id/lab_environ_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_environ"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_environ"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_environ">
+
+                    <TextView
+                        android:id="@+id/lab_environ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/frag_msg_environment_watch"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_environ_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_environ"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_environ_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_environ_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/conlayout_thirpartite"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_thirpartite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/threeparty_button" />
+
+                <TextView
+                    android:id="@+id/lab_threeparty_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_thirpartite"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_thirpartite"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_thirpartite">
+
+                    <TextView
+                        android:id="@+id/lab_thirpartite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/frag_msg_synergy"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_threeparty_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_thirpartite"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_thirpartite_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_thirpartite_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--渣土车监控 -->
+            <RelativeLayout
+                android:id="@+id/conlayout_dirtcar"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_dirtcar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/msg_dirtcar" />
+
+                <TextView
+                    android:id="@+id/lab_dirtcar_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_dirtcar"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_dirtcar"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_dirtcar">
+
+                    <TextView
+                        android:id="@+id/lab_dirtcar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="渣土车监控消息"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_dirtcar_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_dirtcar"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_dirtcar_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_dirtcar_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--巡查任务 -->
+            <RelativeLayout
+                android:id="@+id/conlayout_task"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/msg_task" />
+
+                <TextView
+                    android:id="@+id/lab_task_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_task"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_task"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_task">
+
+                    <TextView
+                        android:id="@+id/lab_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="巡查任务消息"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_task_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_task"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_task_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_task_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--巡查计划 -->
+            <RelativeLayout
+                android:id="@+id/conlayout_plan"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/msg_item_press_bg"
+                android:paddingLeft="14dp"
+                android:layout_marginBottom="20dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:id="@+id/img_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/msg_plan" />
+
+                <TextView
+                    android:id="@+id/lab_plan_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/img_plan"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/img_plan"
+                    android:background="@drawable/shape_corner_msg_num"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_plan">
+
+                    <TextView
+                        android:id="@+id/lab_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="巡查计划消息"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lab_plan_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/lab_plan"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textColor="@color/des_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/lab_plan_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textColor="@color/hit_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lab_plan_time"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/msg_litarrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

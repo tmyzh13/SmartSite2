@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        style="@style/toolbar_style"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:onClick="onBackBtnClick"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/bigarrow" />
+
+            <TextView
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:gravity="center"
+                android:onClick="onClick_submit"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="提交"
+                android:textColor="@color/title_save"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.isoftstone.smartsite.model.tripartite.view.MyGridView
+            android:id="@+id/grid_view"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/img_edit_report"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:gravity="left"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"></com.isoftstone.smartsite.model.tripartite.view.MyGridView>
+
+        <TextView
+            android:id="@+id/lab_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/address_update_photo"
+            android:drawablePadding="10dp"
+            android:onClick="onClick_address"
+            android:text="所在位置"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

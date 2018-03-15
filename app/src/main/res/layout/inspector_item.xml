@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/textView_sort"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="12dp"
+            android:textSize="12dp"
+            android:textColor="@color/colorSort"
+            android:background="@color/colorSortBackground"
+            android:text="TextView" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView_sort">
+
+            <ImageView
+                android:id="@+id/imageView_contactIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/default_head"/>
+            <!--android:layout_alignBottom="@id/textView_sort"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+
+            <TextView
+                android:id="@+id/textView_contactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorContact"
+                android:paddingLeft="12dp"
+                android:textSize="15dp"
+                android:layout_toRightOf="@id/imageView_contactIcon"></TextView>
+            <!--android:layout_alignBottom="@id/textView_sort"/>-->
+
+            <CheckBox
+                android:id="@+id/checkBox_contactIsCheck"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                style="@style/CustomCheckboxTheme"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

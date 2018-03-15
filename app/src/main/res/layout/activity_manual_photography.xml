@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_toolbar_one_icon"></include>
+
+    <com.isoftstone.smartsite.common.widget.PullToRefreshListView
+        android:id="@+id/main_lv_list"
+        android:divider="@color/app_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

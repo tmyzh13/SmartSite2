@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/loginlogo" />
+
+
+
+    <LinearLayout
+        android:id="@+id/login_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/userId_LinearLayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:id="@+id/imageView_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/loginuser_gray"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"/>
+                <!-- android:ems="10"表示EditText内最多只显示10个字符，超出不显示 -->
+				<!-- android:singleLine="true"表示不能全部显示时，后面用“…”来表示 -->
+                <EditText
+                    android:id="@+id/login_edtId"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="@string/idtxthint"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hit_text_color"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="18dp" >
+
+                </EditText>
+
+            </LinearLayout>
+
+           <!-- 横线  -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/hit_text_color"
+                android:id="@+id/view_1"/>
+
+            <LinearLayout
+                android:id="@+id/userId_LinearLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/loginpassword_gray"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"/>
+
+                <EditText
+                    android:id="@+id/login_edtPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@null"
+                    android:hint="@string/pwdtxthint"
+                    android:inputType="textPassword"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="0dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hit_text_color"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/hit_text_color"
+                android:id="@+id/view_2"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_button_style"
+            android:text="@string/loginbtntext"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/check_layout"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passwd_checkbox"
+                    android:src="@drawable/checkbox_select"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="记住用户名和密码"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

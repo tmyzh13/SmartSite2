@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/select_inspecter_title"
+        style="@style/toolbar_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        contentInsetLeft="0dp"
+        contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_back_press_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/bigarrow" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/select_inspecter_title"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_inspectors"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/select_inspecter_btn"
+                android:background="@drawable/btn_back_press_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/listView_Icon"
+        android:layout_below="@id/select_inspecter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_inspector_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:orientation="horizontal"/>
+
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_below="@id/listView_Icon"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorSortBackground" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="12dp"
+        android:textSize="14dp"
+        android:text="@string/select_inspecter" />
+    <ListView
+        android:id="@+id/listView_Contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/textView"
+        android:scrollbars="vertical"/>
+    <!--</RelativeLayout>-->
+
+    <com.gjiazhe.wavesidebar.WaveSideBar
+        android:id="@+id/side_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="8dp"
+        android:layout_below="@id/listView_Icon"
+        app:sidebar_text_color="@color/colorContact"
+        sidebar_text_size="12dp"/>
+</RelativeLayout>
