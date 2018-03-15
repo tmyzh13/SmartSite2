@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.isoftstone.smartsite"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 2322
+        versionName "2.3.22"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs'] //,'src/main/jniLibs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    ///compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    //    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile files('libs/okhttp-3.9.0.jar')
+    compile files('libs/okio-1.9.0.jar')
+    compile files('libs/mpchart.jar')
+    compile files('libs/org.apache.commons.lang.jar')
+    compile files('libs/org.apache.thrift.jar')
+    compile files('libs/org.slf4j.jar')
+    compile files('libs/tssdk.jar')
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/mime-util-2.1.3.jar')
+    compile files('libs/jpush-android-3.0.9.jar')
+    compile files('libs/jcore-android-1.1.7.jar')
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile files('libs/universalimageloaderlibrary1.9.0.jar')
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.gittjy:LoadingDialog:1.0.2'
+    implementation files('libs/joda-time-2.3.jar')
+    compile 'com.gjiazhe:wavesidebar:1.3'
+    compile files('libs/android-async-http-1.4.4.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'com.leon:lfilepickerlibrary:1.1'
+}
